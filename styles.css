@@ -1,0 +1,358 @@
+/* ---------- CSS Variables ---------- */
+:root{
+    /* Colors */
+    --dk-green: #166212;
+    --med-green: #21941b;
+    --lt-green: #afceb1;
+    --br-green: #30d627;
+    --white: #fff;
+    --lt-gray: #eaeaea;
+    --dk-gray: #222;
+
+    /* Fonts */
+    --fonts: 'Sunflower', 'Trebuchet MS', sans-serif;
+}
+
+header{
+    padding: 1rem;
+    width: 968px;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--white);
+    border-bottom: 8px solid var(--lt-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+header a{
+    padding: 0;
+}
+
+header img{
+    width: 225px;
+    height: auto;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 4px solid var(--white);
+    border-bottom: 4px solid var(--dk-green);
+    color: var(--dk-gray);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav a:hover{
+    border-color: var(--dk-green);
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-family: var(--fonts);
+    background-color: var(--lt-green);
+    color: var(--dk-gray);
+}
+
+main{
+    width: 1000px;
+    padding: 2rem 0;
+    margin: 0 auto 8px auto;
+    background-color: var(--white);
+}
+
+main > section{
+    padding: 2rem 1rem;
+}
+
+main h2{
+    font-size: 1.75rem;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0;
+    background-color: var(--dk-green);
+    color: var(--white);
+}
+
+#info div{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: auto;
+}
+
+#info img{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--med-green);
+}
+
+#info dl{
+    margin: 0;
+}
+
+#info dt{
+    font-weight: bold;
+    font-size: 1.35rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+dt a{
+    display: inline-block;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: var(--dk-green);
+}
+
+dt a:hover{
+    border: 1px solid var(--dk-green);
+    background-color: var(--white);
+}
+
+dt a:hover svg{
+    stroke: var(--dk-green);
+    fill: none;
+}
+
+dt svg{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    stroke: var(--white);
+}
+
+#notify div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 600px;
+    margin: auto;
+}
+
+#notify section{
+    display: flex;
+    flex-direction: column;
+}
+
+#notify h3{
+    font-size: 1.45rem;
+    text-align: center;
+}
+
+#notify a{
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    color: var(--dk-gray);
+}
+
+#notify a:hover svg{
+    transform: scale(1.1);
+    fill: var(--dk-green);
+    stroke: var(--dk-green);
+}
+
+#notify svg{
+    width: 150px;
+    height: auto;
+    transition: all 300ms;
+    /* this ^ controls the speed of the change in styles on hover */
+    stroke: none;
+}
+
+#notify span{
+    display: block;
+    font-size: 1.25rem;
+    width: fit-content;
+    background-color: var(--br-green);
+    padding: 0.25rem 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+#likes span{
+    top: 10px;
+    left: 140px;
+}
+
+#likes svg{
+    stroke-width: 0;
+    width: 135px;
+    margin: 1rem auto 0.5rem auto;
+}
+
+#messages span{
+    top: -15px;
+    left: 150px;
+}
+
+#messages a{
+    margin-top: 1.5rem;
+}
+
+#messages svg{
+    stroke-width: 0;
+    margin: auto;
+}
+
+#friends span{
+    top: 10px;
+    left: 140px;
+}
+
+#friends svg{
+    stroke: var(--dk-green);
+    stroke-width: 1.5;
+    margin: auto;
+}
+
+#feedback p{
+    margin: 1.5rem auto;
+}
+
+#feedback form{
+    width: 300px;
+    margin: 0 auto;
+}
+
+input, label, textarea, #my-submit{
+    display: block;
+    font-family: var(--fonts);
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+label{
+    margin: 0.5rem 0 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+span .required{
+    font-size: 1.5rem;
+    color: var(--dk-green);
+}
+
+input, textarea{
+    padding: 0.25rem;
+    width: 275px;
+    margin: auto;
+    border: none;
+    background-color: var(--lt-gray);
+}
+
+input:invalid, textarea:invalid{
+    outline: 3px solid var(--br-green);
+}
+
+input:focus, textarea:focus{
+    outline: 3px solid var(--dk-green);
+}
+
+#my-submit{
+    width: 50%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    font-family: var(--fonts);
+    font-size: 1.45rem;
+    font-weight: normal;
+    outline: none;
+    border: 4px solid var(--dk-green);
+    background-color: var(--dk-green);
+    color: var(--white);
+}
+
+#my-submit:focus{
+    border-color: var(--med-green);
+}
+
+#my-submit:hover{
+    background-color: var(--white);
+    color: var(--dk-green);
+}
+
+a{
+    display: block;
+    padding: 1rem;
+}
+
+img{
+    display: block;
+}
+
+svg{
+    display: block;
+    justify-content: center;
+    margin: 0;
+    fill: var(--dk-green);
+}
+
+p{
+    width: 100%;
+    max-width: 65ch;
+    align-content: center;
+}
+
+footer{
+    padding: 1rem;
+    width: 968px;
+    margin: auto;
+    background-color: var(--white);
+    text-align: center;
+    padding-top: 2rem;
+}
+
+footer section{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    width: 520px;
+    margin: 0 auto 1rem auto;
+}
+
+footer h2{
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1;
+    grid-column: 1/-1;
+}
+
+footer a{
+    padding: 0.5rem;
+    color: var(--dk-gray);
+    text-underline-offset: 4px;
+    text-decoration-color: var(--dk-green);
+    text-decoration-thickness: 2px;
+}
+
+footer a:hover{
+    color: var(--dk-green);
+}
+
+footer p{
+    font-size: 1rem;
+    margin: auto;
+}
